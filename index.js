@@ -5,11 +5,10 @@ const createSVG = require("./lib/shapes");
 // list of question about image for user
 let questions = 
 [
-    {type: "input", message: "Provide the three letters you would like in the image", name: "letters", default: "img"},
-    {type: "input", message: "Provide a text color in either words ex:[white, black, pink, purple, green] or 6 digit hexadecimal format", name: "lettersColor", default: "red"},
+    {type: "input", message: "Provide the three letters you would like in the image", name: "letters"},
+    {type: "input", message: "Provide a text color in either words ex:[white, black, pink, purple, green] or 6 digit hexcode format", name: "lettersColor"},
     {type: "list", message: "Pick the shape you desire", choices: ["Circle", "Square", "Triangle"], name:"shape"},
-    {type: "input", message:"Provide a shape color in either words or 6 digit hexadecimal format", name: "shapeColor", default: "black"},
-    {type: "input", message: "Provide the file name for the svg", name: "fileName"}
+    {type: "input", message:"Provide a shape color in either words or 6 digit hexcode format", name: "shapeColor"},
 ];
 
 inquirer.prompt(questions)
@@ -24,11 +23,13 @@ inquirer.prompt(questions)
     if(response.shape == "Triangle"){shape = new createSVG.Triangle(response.shapeColor);}
 
     // call the SVG class and create instance from the data given and the shape instance created with the shape color
-    svg = new createSVG.SVG(response.letters, response.lettersColor, shape, response.fileName)
+    svg = new createSVG.SVG(response.letters, response.lettersColor, shape)
 
     // return the svg
     return svg;
 }).then(svg => {
     // call the write to file function to setup the shape
     svg.writeToFile();
+    // write to console
+    console.log("Generated logo.svg");
 })

@@ -9,7 +9,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test/shapes.test.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",

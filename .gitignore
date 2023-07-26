@@ -1,3 +1,5 @@
 node_modules
 delete
 package-lock.json
+test
+test.svg

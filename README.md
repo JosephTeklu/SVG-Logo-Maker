@@ -1,7 +1,7 @@
 # SVG-Logo-Maker
   MIT<br>[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description 
-  This program allow the user to create an svg filetype logo. Using Inquirer.js it promps the user for what 3 letters to add to the logo, what color for the letter, the desired shape of the logo, as well as the color of the shape. This will create a logo.svg file in the working directory with the desired outcome.
+  This program allow the user to create an svg filetype logo. Using Inquirer.js it promps the user for what 3 letters to add to the logo, what color for the letter, the desired shape of the logo, as well as the color of the shape. This will create a ```logo.svg``` file in the working directory with the desired outcome.
 ## Table of Contents
   - [Installation](#installation)
  - [Usage](#usage) 

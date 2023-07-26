@@ -1,4 +1,3 @@
-node_modules
-delete
+/node_modules
+/delete
 package-lock.json
-logo.svg
